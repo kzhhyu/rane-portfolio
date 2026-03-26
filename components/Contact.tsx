@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 
 const links = [
-  { icon: '✉', label: 'Email',    value: 'hello@rane.design',   href: 'mailto:hello@rane.design' },
+  { icon: '✉', label: 'Email',    value: 'keziahlonoy@gmail.com',   href: 'mailto:keziahlonoy@gmail.com' },
   { icon: 'in', label: 'LinkedIn', value: '/in/rane',            href: 'https://linkedin.com' },
   { icon: '⬡',  label: 'Dribbble', value: 'dribbble.com/rane',  href: 'https://dribbble.com' },
   { icon: 'Be', label: 'Behance',  value: 'behance.net/rane',    href: 'https://behance.net' },

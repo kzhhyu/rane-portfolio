@@ -61,7 +61,7 @@ export default function Projects() {
           className="font-display text-4xl lg:text-5xl leading-tight tracking-tight mb-4"
           style={{ color: 'var(--text-primary)' }}
         >
-          Things I&apos;ve built.
+          Projects  I have worked on.
         </h2>
         <p className="text-base font-light leading-loose max-w-lg" style={{ color: 'var(--text-muted)' }}>
           A selection of projects that reflect how I think, what I care about, and the problems I love solving.

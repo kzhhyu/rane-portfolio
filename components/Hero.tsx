@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 
 export default function Hero() {
   const copyRef = useRef<HTMLDivElement>(null)
@@ -59,7 +60,7 @@ export default function Hero() {
           {/* CTAs */}
           <div className="flex flex-wrap gap-4">
             <a
-              href="#work"
+              href="#projects"
               className="inline-flex items-center gap-2 px-7 py-3 rounded-full text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5"
               style={{ background: 'var(--text-accent)' }}
               onMouseEnter={e => {
@@ -71,7 +72,7 @@ export default function Hero() {
                 e.currentTarget.style.boxShadow = 'none'
               }}
             >
-              View my work ↓
+              View my projects ↓
             </a>
             <a
               href="#contact"
@@ -113,11 +114,20 @@ export default function Hero() {
                 borderRadius: '50% 50% 50% 50% / 48% 48% 52% 52%',
               }}
             >
-              <span className="font-display text-6xl leading-none" style={{ color: 'var(--text-accent)' }}>R</span>
+              <Image
+                src="/public/images/pfp.jpg"
+                alt="Profile"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+            </div>
+
+            {/*  <span className="font-display text-6xl leading-none" style={{ color: 'var(--text-accent)' }}>R</span>
               <small className="text-xs tracking-widest uppercase" style={{ color: 'var(--text-muted)' }}>
                 UI/UX Designer
               </small>
-            </div>
+            </div>*/}
 
             {/* Floating chips */}
             {[
