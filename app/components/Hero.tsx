@@ -115,15 +115,13 @@ export default function Hero() {
                 borderRadius: '50% 50% 50% 50% / 48% 48% 52% 52%',
               }}
             >
-              <div className="relative w-full h-full">
-                <Image
-                  src="/images/pfp.jpg"
-                  alt="Profile"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
+              <Image
+                src="/images/pfp.jpg"
+                alt="Profile"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
             </div>
 
             {/*  <span className="font-display text-6xl leading-none" style={{ color: 'var(--text-accent)' }}>R</span>
