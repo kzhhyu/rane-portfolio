@@ -106,22 +106,31 @@ export default function Hero() {
               }}
             />
 
-            {/* Avatar placeholder */}
             <div
-              className="absolute inset-5 flex flex-col items-center justify-center gap-1 border"
+              className="absolute inset-0 overflow-hidden"
+              style={{
+                borderRadius: '60% 40% 55% 45% / 50% 55% 45% 50%',
+              }}
+            >
+              {/* Avatar placeholder */}
+              <div
+              className="absolute inset-5 flex items-center justify-center"
               style={{
                 background: 'var(--surface)',
-                borderColor: 'var(--border)',
                 borderRadius: '50% 50% 50% 50% / 48% 48% 52% 52%',
               }}
             >
-              <Image
-                src="/images/pfp.jpg"
-                alt="Profile"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/pfp.jpg"
+                  alt="Profile"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority
+                />
+                </div>
+              </div>
             </div>
 
             {/*  <span className="font-display text-6xl leading-none" style={{ color: 'var(--text-accent)' }}>R</span>
