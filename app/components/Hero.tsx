@@ -122,7 +122,7 @@ export default function Hero() {
             >
               <div className="relative w-full h-full">
                 <Image
-                  src="/images/pfp.jpg"
+                  src="/images/pfp.png"
                   alt="Profile"
                   fill
                   className="object-cover"
