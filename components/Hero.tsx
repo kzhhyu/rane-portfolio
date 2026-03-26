@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
+
 export default function Hero() {
   const copyRef = useRef<HTMLDivElement>(null)
   const visualRef = useRef<HTMLDivElement>(null)
@@ -114,13 +115,15 @@ export default function Hero() {
                 borderRadius: '50% 50% 50% 50% / 48% 48% 52% 52%',
               }}
             >
-              <Image
-                src="/public/images/pfp.jpg"
-                alt="Profile"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/pfp.jpg"
+                  alt="Profile"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              </div>
             </div>
 
             {/*  <span className="font-display text-6xl leading-none" style={{ color: 'var(--text-accent)' }}>R</span>
