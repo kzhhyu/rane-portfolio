@@ -9,7 +9,7 @@ const projects = [
     desc: 'A student-centered service and marketplace app that allows users to request or offer help through features like pabili, patulong, padala, and pakuha, promoting convenience, trust, and community within the campus.',
     tags: ['Mobile', 'UI/UX', 'Marketplace'],
     thumbnailImage: '/images/projects/palihog-app/palihog-icon.png',
-    gradient: 'linear-gradient(135deg, #ede9fe, #c4b5fd)',
+    gradient: 'linear-gradient(135deg, #d5e8f7, #1d81cd)',
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
     thumbLabel: 'Application',
     href: '/projects/palihog-app',
