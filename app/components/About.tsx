@@ -81,8 +81,14 @@ export default function About() {
               </strong>
             </p>
             <p>
-              I am an undergraduate Bachelor of Science in Information Technology student at 
-              Father Saturnino Urios University with a passion for UI/UX design.
+              I am an undergraduate{' '}
+              <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
+                Bachelor of Science in Information Technology
+              </strong>{' '}
+              student at Father Saturnino Urios University with a passion for{' '}
+              <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
+                UI/UX design
+              </strong>.{' '}
               I have a strong desire to create intuitive and visually appealing digital experiences
               that enhance user satisfaction. With a solid foundation in design principles and a keen
               eye for detail, I am dedicated to crafting user-centered designs that effectively communicate
