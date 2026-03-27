@@ -73,19 +73,22 @@ export default function About() {
 
         {/* Right — bio + stats */}
         <div ref={rightRef} className="reveal" style={{ transitionDelay: '0.15s' }}>
-          <div className="space-y-5 text-base font-light leading-loose" style={{ color: 'var(--text-primary)' }}>
+          <div className="space-y-5 text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
             <p>
-              I am an undergraduate{' '}
-              <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
-                Bachelor of Science in Information Technology
-              </strong>{' '}
+              I am an undergraduate Bachelor of Science in Information Technology
               student at Father Saturnino Urios University with a passion for{' '}
               <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
                 UI/UX design
               </strong>.{' '}
-              I have a strong desire to create intuitive and visually appealing digital experiences
-              that enhance user satisfaction. With a solid foundation in design principles and a keen
-              eye for detail, I am dedicated to crafting user-centered designs that effectively communicate
+              I have a strong desire to create{' '}
+              <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
+                intuitive and visually appealing digital experiences
+              </strong>{' '}
+              that enhance user satisfaction. With a solid foundation in{' '}
+              <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
+                design principles and a keen eye for detail,
+              </strong>{' '}
+              I am dedicated to crafting user-centered designs that effectively communicate
               ideas and solve problems.
             </p>
             <p>
