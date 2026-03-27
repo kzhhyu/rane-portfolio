@@ -77,7 +77,7 @@ export default function Contact() {
               onMouseEnter={e => {
                 e.currentTarget.style.borderColor = '#c4b5fd'
                 e.currentTarget.style.color = 'var(--text-accent)'
-                e.currentTarget.style.background = '#f5f3ff'
+                e.currentTarget.style.background = '#6d28d9'
                 e.currentTarget.style.transform = 'translateX(4px)'
               }}
               onMouseLeave={e => {
