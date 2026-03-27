@@ -3,10 +3,8 @@
 import { useEffect, useRef } from 'react'
 
 const links = [
-  { icon: '✉', label: 'Email',    value: 'keziahlonoy27@gmail.com',   href: 'mailto:keziahlonoy27@gmail.com' },
-  { icon: 'in', label: 'LinkedIn', value: '/in/keziahlonoy',            href: 'https://www.linkedin.com/in/keziah-lonoy/' },
-  {/* { icon: 'U',  label: 'Upwork', value: 'upwork.com/freelancers/keziahl',  href: 'https://www.upwork.com/freelancers/~018b7f26a28171b012?mp_source=share' },*/},
-  {/* icon: 'OJ', label: 'OnlineJobsPH',  value: 'v2.onlinejobs.ph/keziahlonoy',    href: 'https://v2.onlinejobs.ph/jobseekers/info/4606237' },*/}
+  { icon: '✉', label: 'Email', value: 'keziahlonoy27@gmail.com', href: 'mailto:keziahlonoy27@gmail.com' },
+  { icon: 'in', label: 'LinkedIn', value: '/in/keziahlonoy', href: 'https://www.linkedin.com/in/keziah-lonoy/' },
 ]
 
 export default function Contact() {
@@ -44,7 +42,7 @@ export default function Contact() {
             Don&apos;t hesitate to reach out.
           </p>
           <a
-            href="mailto:hello@rane.design"
+            href="mailto:keziahlonoy27@gmail.com"
             className="inline-flex items-center gap-2 mt-8 px-7 py-3 rounded-full text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5"
             style={{ background: 'var(--text-accent)' }}
             onMouseEnter={e => {
@@ -77,13 +75,11 @@ export default function Contact() {
               onMouseEnter={e => {
                 e.currentTarget.style.borderColor = '#c4b5fd'
                 e.currentTarget.style.color = 'var(--text-accent)'
-                e.currentTarget.style.background = '#6d28d9'
                 e.currentTarget.style.transform = 'translateX(4px)'
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.borderColor = 'var(--border)'
                 e.currentTarget.style.color = 'var(--text-muted)'
-                e.currentTarget.style.background = 'var(--surface)'
                 e.currentTarget.style.transform = 'translateX(0)'
               }}
             >
