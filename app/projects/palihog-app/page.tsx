@@ -17,48 +17,48 @@ export default function PalihogApp() {
 
   const uiDesigns = [
     {
-        id: 1,
-        title: 'Onboarding Screen',
-        description: 'Loading screen when opening the app',
-        image: '/images/projects/palihog-app/onboarding.png',
-        category: 'Onboarding',
-      },
+      id: 1,
+      title: 'Onboarding Screen',
+      description: 'Loading screen when opening the app',
+      image: '/images/projects/palihog-app/onboarding.png',
+      category: 'Onboarding',
+    },
     {
-        id: 2,
-        title: 'Home Screen',
-        description: 'Main dashboard showing available services and user activity',
-        image: '/images/projects/palihog-app/home.png',
-        category: 'Dashboard',
-      },
+      id: 2,
+      title: 'Home Screen',
+      description: 'Main dashboard showing available services and user activity',
+      image: '/images/projects/palihog-app/home.png',
+      category: 'Dashboard',
+    },
     {
-        id: 3,
-        title: 'Request Screen',
-        description: 'Interface for users to request services from other students',
-        image: '/images/projects/palihog-app/request.png',
-        category: 'Services',
-      },
+      id: 3,
+      title: 'Request Screen',
+      description: 'Interface for users to request services from other students',
+      image: '/images/projects/palihog-app/request.png',
+      category: 'Services',
+    },
     {
-        id: 4,
-        title: 'Chat Interface',
-        description: 'In-app chat for coordinating service requests',
-        image: '/images/projects/palihog-app/messaging.png',
-        category: 'Communication',
-      },
+      id: 4,
+      title: 'Chat Interface',
+      description: 'In-app chat for coordinating service requests',
+      image: '/images/projects/palihog-app/messaging.png',
+      category: 'Communication',
+    },
     {
-        id: 5,
-        title: 'User Profile',
-        description: 'Verified student profiles',
-        image: '/images/projects/palihog-app/profile.png',
-        category: 'Profile',
-      },
-    ];
+      id: 5,
+      title: 'User Profile',
+      description: 'Verified student profiles',
+      image: '/images/projects/palihog-app/profile.png',
+      category: 'Profile',
+    },
+  ]
 
-    const categories = ['All', 'Onboarding', 'Dashboard', 'Services', 'Communication', 'Profile']
-    const [activeCategory, setActiveCategory] = useState('All')
+  const categories = ['All', 'Onboarding', 'Dashboard', 'Services', 'Communication', 'Profile']
+  const [activeCategory, setActiveCategory] = useState('All')
 
-    const filteredDesigns = activeCategory === 'All' 
-        ? uiDesigns 
-        : uiDesigns.filter(design => design.category === activeCategory)
+  const filteredDesigns = activeCategory === 'All' 
+    ? uiDesigns 
+    : uiDesigns.filter(design => design.category === activeCategory)
 
   return (
     <main className="min-h-screen pt-32 pb-20 max-w-4xl mx-auto px-10">
@@ -120,85 +120,110 @@ export default function PalihogApp() {
           </p>
         </section>
 
-        {/* Problem Statement 
+        {/* UI Design Gallery */}
         <section className="mb-12">
           <h2
             className="font-display text-2xl lg:text-3xl mb-4"
             style={{ color: 'var(--text-primary)' }}
           >
-            Problem Statement
+            UI Design Gallery
           </h2>
-          <p className="text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
-            Students often face challenges when needing quick assistance on campus—whether it's buying items, getting help with tasks, sending packages, or requesting pickups. Existing solutions are fragmented and don't provide a trusted, unified platform for student-to-student services.
+          <p className="text-base font-light leading-loose mb-6" style={{ color: 'var(--text-muted)' }}>
+            Explore the user interface design of the PALIHOG App.
           </p>
-        </section> */}
 
-        {/* Solution
-        <section className="mb-12">
-          <h2
-            className="font-display text-2xl lg:text-3xl mb-4"
-            style={{ color: 'var(--text-primary)' }}
-          >
-            Solution
-          </h2>
-          <p className="text-base font-light leading-loose mb-4" style={{ color: 'var(--text-muted)' }}>
-            PALIHOG App addresses these challenges by providing:
-          </p>
-          <ul className="list-disc pl-6 space-y-2" style={{ color: 'var(--text-muted)' }}>
-            <li><strong className="font-medium" style={{ color: 'var(--text-accent)' }}>Pabili:</strong> Request someone to buy items for you</li>
-            <li><strong className="font-medium" style={{ color: 'var(--text-accent)' }}>Patulong:</strong> Get help with tasks and errands</li>
-            <li><strong className="font-medium" style={{ color: 'var(--text-accent)' }}>Padala:</strong> Send packages within the campus</li>
-            <li><strong className="font-medium" style={{ color: 'var(--text-accent)' }}>Pakuha:</strong> Request pickups from specific locations</li>
-          </ul>
-        </section> */}
-
-        {/* Design Process
-        <section className="mb-12">
-          <h2
-            className="font-display text-2xl lg:text-3xl mb-4"
-            style={{ color: 'var(--text-primary)' }}
-          >
-            Design Process
-          </h2>
-          
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-display text-xl mb-2" style={{ color: 'var(--text-accent)' }}>
-                1. Research
-              </h3>
-              <p className="text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
-                Conducted user interviews with 20+ students to understand their needs, pain points, and behaviors around campus services.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-display text-xl mb-2" style={{ color: 'var(--text-accent)' }}>
-                2. Ideation
-              </h3>
-              <p className="text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
-                Brainstormed solutions and created user flows for each feature, ensuring intuitive navigation and clear user pathways.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-display text-xl mb-2" style={{ color: 'var(--text-accent)' }}>
-                3. Design
-              </h3>
-              <p className="text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
-                Created wireframes and high-fidelity prototypes focusing on trust-building elements, clear communication, and easy task management.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="font-display text-xl mb-2" style={{ color: 'var(--text-accent)' }}>
-                4. Testing
-              </h3>
-              <p className="text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
-                Conducted usability testing with 15 users, iterated based on feedback to improve clarity and reduce friction points.
-              </p>
-            </div>
+          {/* Category Filters */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {categories.map(category => (
+              <button
+                key={category}
+                onClick={() => setActiveCategory(category)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeCategory === category
+                    ? 'text-white'
+                    : 'border'
+                }`}
+                style={{
+                  background: activeCategory === category ? 'var(--text-accent)' : 'transparent',
+                  borderColor: 'var(--border)',
+                  color: activeCategory === category ? 'white' : 'var(--text-muted)',
+                }}
+              >
+                {category}
+              </button>
+            ))}
           </div>
-        </section> */}
+
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {filteredDesigns.map((design) => (
+              <div
+                key={design.id}
+                className="group rounded-xl border overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                style={{
+                  background: 'var(--bg-card)',
+                  borderColor: 'var(--border)',
+                }}
+                onClick={() => setSelectedImage(design.id)}
+              >
+                {/* Image Container */}
+                <div className="relative h-80 overflow-hidden bg-gray-100">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={design.image}
+                      alt={design.title}
+                      fill
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span className="text-white text-sm font-medium px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm">
+                      Click to enlarge
+                    </span>
+                  </div>
+                </div>
+                
+                {/* Image Info */}
+                <div className="p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="font-display text-lg" style={{ color: 'var(--text-primary)' }}>
+                      {design.title}
+                    </h3>
+                    <span
+                      className="text-xs px-2 py-1 rounded-full"
+                      style={{
+                        background: 'var(--lavender-50, #f5f3ff)',
+                        color: 'var(--text-accent)',
+                      }}
+                    >
+                      {design.category}
+                    </span>
+                  </div>
+                  <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
+                    {design.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Empty State */}
+          {filteredDesigns.length === 0 && (
+            <div
+              className="text-center py-12 rounded-xl border"
+              style={{
+                background: 'var(--bg-card)',
+                borderColor: 'var(--border)',
+              }}
+            >
+              <p className="text-base" style={{ color: 'var(--text-muted)' }}>
+                No designs found in this category.
+              </p>
+            </div>
+          )}
+        </section>
 
         {/* Key Features */}
         <section className="mb-12">
@@ -234,59 +259,43 @@ export default function PalihogApp() {
             ))}
           </div>
         </section>
-
-        {/* Results 
-        <section className="mb-12">
-          <h2
-            className="font-display text-2xl lg:text-3xl mb-4"
-            style={{ color: 'var(--text-primary)' }}
-          >
-            Results & Impact
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-            {[
-              { value: '85%', label: 'User Satisfaction' },
-              { value: '500+', label: 'Active Users' },
-              { value: '4.8', label: 'App Rating' },
-            ].map(stat => (
-              <div
-                key={stat.label}
-                className="text-center p-4 rounded-xl border"
-                style={{
-                  background: 'var(--bg-card)',
-                  borderColor: 'var(--border)',
-                }}
-              >
-                <div className="font-display text-3xl mb-1" style={{ color: 'var(--text-accent)' }}>
-                  {stat.value}
-                </div>
-                <div className="text-xs tracking-widest uppercase" style={{ color: 'var(--text-muted)' }}>
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
-            The app successfully launched with positive feedback from the student community, with users reporting increased convenience and stronger campus connections.
-          </p>
-        </section>*/}
-
-        {/* Next Steps
-        <section className="mb-12">
-          <h2
-            className="font-display text-2xl lg:text-3xl mb-4"
-            style={{ color: 'var(--text-primary)' }}
-          >
-            Future Enhancements
-          </h2>
-          <ul className="list-disc pl-6 space-y-2" style={{ color: 'var(--text-muted)' }}>
-            <li>AI-powered task matching recommendations</li>
-            <li>Gamification elements to encourage engagement</li>
-            <li>Expanded payment options and escrow system</li>
-            <li>Integration with campus events and announcements</li>
-          </ul>
-        </section> */}
       </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-5xl max-h-[90vh] w-full h-full">
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="relative w-full h-full">
+              <Image
+                src={uiDesigns.find(d => d.id === selectedImage)?.image || ''}
+                alt={uiDesigns.find(d => d.id === selectedImage)?.title || ''}
+                fill
+                className="object-contain"
+                sizes="100vw"
+              />
+            </div>
+            <div className="absolute bottom-4 left-0 right-0 text-center text-white">
+              <p className="text-lg font-medium">
+                {uiDesigns.find(d => d.id === selectedImage)?.title}
+              </p>
+              <p className="text-sm opacity-75">
+                {uiDesigns.find(d => d.id === selectedImage)?.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   )
 }
