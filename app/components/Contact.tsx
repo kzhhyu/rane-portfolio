@@ -4,9 +4,9 @@ import { useEffect, useRef } from 'react'
 
 const links = [
   { icon: '✉', label: 'Email',    value: 'keziahlonoy@gmail.com',   href: 'mailto:keziahlonoy@gmail.com' },
-  { icon: 'in', label: 'LinkedIn', value: '/in/rane',            href: 'https://linkedin.com' },
-  { icon: '⬡',  label: 'Dribbble', value: 'dribbble.com/rane',  href: 'https://dribbble.com' },
-  { icon: 'Be', label: 'Behance',  value: 'behance.net/rane',    href: 'https://behance.net' },
+  { icon: 'in', label: 'LinkedIn', value: '/in/keziahlonoy',            href: 'https://www.linkedin.com/in/keziah-lonoy/' },
+  { icon: 'U',  label: 'Upwork', value: 'upwork.com/freelancers/keziahl',  href: 'https://www.upwork.com/freelancers/~018b7f26a28171b012?mp_source=share' },
+  { icon: 'OJ', label: 'OnlineJobsPH',  value: 'v2.onlinejobs.ph/keziahlonoy',    href: 'https://v2.onlinejobs.ph/jobseekers/info/4606237' },
 ]
 
 export default function Contact() {
@@ -76,7 +76,7 @@ export default function Contact() {
               }}
               onMouseEnter={e => {
                 e.currentTarget.style.borderColor = '#c4b5fd'
-                e.currentTarget.style.color = 'var(--text-primary)'
+                e.currentTarget.style.color = 'var(--text-accent)'
                 e.currentTarget.style.background = '#6d28d9'
                 e.currentTarget.style.transform = 'translateX(4px)'
               }}

@@ -54,7 +54,7 @@ export default function Hero() {
 
           {/* Description */}
           <p className="text-base font-light leading-loose mb-10 max-w-md" style={{ color: 'var(--text-muted)' }}>
-            Hi, I'm Keziah Rane Mari Lonoy, but I go by Rane — a UI/UX designer who is driven by curiousity and a deep respect for the people who use what I create.
+            Hi, I'm Keziah Rane Mari Lonoy, but I go by Rane — a UI/UX designer who is driven by curiosity and a deep respect for the people who use what I create.
             I craft digital products that are thoughtful, minimal, and <em>memorable</em>.
           </p>
 
