@@ -4,8 +4,8 @@ import { useEffect, useRef } from 'react'
 
 const projects = [
   {
-    name: 'Mindful — Wellness App',
-    desc: 'A habit-tracking and journaling app designed around calm, reduced cognitive load, and daily rituals.',
+    name: 'PALIHOG App',
+    desc: 'A student-centered service and marketplace app that allows users to request or offer help through features like pabili, patulong, padala, and pakuha, promoting convenience, trust, and community within the campus.',
     tags: ['Mobile', 'UI/UX'],
     icon: '✦',
     gradient: 'linear-gradient(135deg, #ede9fe, #c4b5fd)',

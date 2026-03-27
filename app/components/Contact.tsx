@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 
 const links = [
-  { icon: '✉', label: 'Email',    value: 'keziahlonoy@gmail.com',   href: 'mailto:keziahlonoy@gmail.com' },
+  { icon: '✉', label: 'Email',    value: 'keziahlonoy27@gmail.com',   href: 'mailto:keziahlonoy27@gmail.com' },
   { icon: 'in', label: 'LinkedIn', value: '/in/keziahlonoy',            href: 'https://www.linkedin.com/in/keziah-lonoy/' },
   { icon: 'U',  label: 'Upwork', value: 'upwork.com/freelancers/keziahl',  href: 'https://www.upwork.com/freelancers/~018b7f26a28171b012?mp_source=share' },
   { icon: 'OJ', label: 'OnlineJobsPH',  value: 'v2.onlinejobs.ph/keziahlonoy',    href: 'https://v2.onlinejobs.ph/jobseekers/info/4606237' },
