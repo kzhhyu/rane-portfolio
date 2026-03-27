@@ -1,37 +1,20 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 
 export default function Navbar() {
   const pathname = usePathname()
-  const router = useRouter()
   const isHomePage = pathname === '/'
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
-      const offset = 80 // Account for fixed navbar height
+      const offset = 80
       const elementPosition = element.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - offset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      })
-    }
-  }
-
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    e.preventDefault()
-    
-    if (isHomePage) {
-      // If on home page, just scroll to the section
-      scrollToSection(sectionId)
-    } else {
-      // If on another page, navigate to home page with hash
-      router.push(`/#${sectionId}`)
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' })
     }
   }
 
@@ -44,12 +27,11 @@ export default function Navbar() {
       e.preventDefault()
       scrollToTop()
     }
-    // If not on home page, let Link handle navigation
   }
 
   // Handle hash navigation when page loads
   useEffect(() => {
-    if (window.location.hash) {
+    if (window.location.hash && pathname === '/') {
       const sectionId = window.location.hash.slice(1)
       setTimeout(() => {
         scrollToSection(sectionId)
@@ -66,33 +48,25 @@ export default function Navbar() {
         transition: 'background 0.3s ease, border-color 0.3s ease',
       }}
     >
-      {/* Logo */}
-      <Link
-        href="/"
-        onClick={handleLogoClick}
-        className="no-underline"
-      >
+      <Link href="/" onClick={handleLogoClick} className="no-underline">
         <span className="font-display text-2xl" style={{ color: 'var(--text-primary)' }}>
           KL<span style={{ color: 'var(--text-accent)' }}></span>
         </span>
       </Link>
 
-      {/* Links */}
       <ul className="hidden md:flex items-center gap-8 list-none">
         {['About', 'Projects', 'Contact'].map(link => {
           const sectionId = link.toLowerCase()
           return (
             <li key={link}>
-              <a
+              <Link
                 href={isHomePage ? `#${sectionId}` : `/#${sectionId}`}
-                onClick={(e) => handleNavClick(e, sectionId)}
                 className="text-sm tracking-wide transition-colors duration-300 hover:text-accent cursor-pointer"
                 style={{ color: 'var(--text-muted)' }}
-                onMouseEnter={e => (e.currentTarget.style.color = 'var(--text-accent)')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
+                scroll={false} // Prevent Next.js from automatically scrolling
               >
                 {link}
-              </a>
+              </Link>
             </li>
           )
         })}
