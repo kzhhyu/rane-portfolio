@@ -13,6 +13,7 @@ const projects = [
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
     thumbLabel: 'Application',
     href: '/projects/palihog-app',
+    logoSize: 'w-24 h-24', // Default size for PALIHOG
   },
   {
     name: 'DIOSys',
@@ -23,6 +24,7 @@ const projects = [
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
     thumbLabel: 'Website',
     href: '#',
+    logoSize: 'w-32 h-32', // Bigger size for DIOSys
   },
   {
     name: 'Furever Home',
@@ -33,6 +35,7 @@ const projects = [
     gradientDark: 'linear-gradient(135deg, #3d1030, #6b1e52)',
     thumbLabel: 'Branding',
     href: '#',
+    logoSize: 'w-24 h-24', // Default size for Furever Home
   },
 ]
 
@@ -99,26 +102,23 @@ export default function Projects() {
               className="h-44 flex items-center justify-center relative overflow-hidden"
               style={{ background: project.gradient }}
             >
-              {/* Improved Image Handling */}
+              {/* Improved Image Handling with custom size */}
               {project.thumbnailImage ? (
-                <div className="relative w-24 h-24 flex items-center justify-center">
+                <div className={`relative ${project.logoSize || 'w-24 h-24'} flex items-center justify-center`}>
                   <Image
                     src={project.thumbnailImage}
                     alt={project.name}
-                    width={96}
-                    height={96}
+                    width={project.name === 'DIOSys' ? 128 : 96} // 128px for DIOSys, 96px for others
+                    height={project.name === 'DIOSys' ? 128 : 96}
                     className="object-contain w-auto h-auto max-w-full max-h-full"
-                    priority={i === 0} // Prioritize first image
+                    priority={i === 0}
                     onError={(e) => {
-                      // Fallback if image fails to load
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
-                      // You could also show a fallback icon here
                     }}
                   />
                 </div>
               ) : (
-                // Fallback icon when no image is provided
                 <span className="text-5xl font-bold opacity-80" style={{ color: 'var(--text-primary)' }}>
                   {project.icon}
                 </span>
