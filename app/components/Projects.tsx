@@ -10,23 +10,23 @@ const projects = [
     icon: '✦',
     gradient: 'linear-gradient(135deg, #ede9fe, #c4b5fd)',
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
-    thumbLabel: 'App design',
+    thumbLabel: 'Application',
     href: '/projects/palihog-app',
   },
   {
-    name: 'Vault — Finance Dashboard',
-    desc: 'A B2B financial analytics dashboard with a comprehensive component library and dark-mode-first design.',
+    name: 'DIOSys',
+    desc: 'A data management system for the Diocese of Butuan that streamlines operations, enhances communication, and provides a centralized platform for managing parish information, events, and resources.',
     tags: ['Web', 'Design System'],
     icon: '◈',
     gradient: 'linear-gradient(135deg, #e0f2fe, #bae6fd)',
     gradientDark: 'linear-gradient(135deg, #0c2a40, #1a4a6e)',
-    thumbLabel: 'Dashboard',
+    thumbLabel: 'Website',
     href: '#',
   },
   {
-    name: 'Bloom — Florist Rebrand',
-    desc: 'End-to-end redesign of a local florist\'s digital presence — from identity to e-commerce experience.',
-    tags: ['Branding', 'UX'],
+    name: 'Furever Home',
+    desc: 'An adoption website for a local animal shelter that connects potential pet adopters with their perfect furry companions, providing detailed profiles, adoption resources, and a seamless application process to help more animals find loving homes.',
+    tags: ['Web', 'Branding', 'Design System'],
     icon: '◉',
     gradient: 'linear-gradient(135deg, #fce7f3, #fbcfe8)',
     gradientDark: 'linear-gradient(135deg, #3d1030, #6b1e52)',
@@ -137,7 +137,7 @@ export default function Projects() {
                 className="inline-flex items-center gap-1.5 mt-4 text-sm font-medium transition-all duration-200"
                 style={{ color: 'var(--text-accent)' }}
               >
-                View case study →
+                View project →
               </span>
             </div>
           </a>
