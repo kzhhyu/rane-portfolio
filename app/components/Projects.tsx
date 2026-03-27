@@ -11,7 +11,6 @@ const projects = [
     thumbnailImage: '/images/projects/palihog-app/palihog-icon.png',
     gradient: 'linear-gradient(135deg, #d5e8f7, #32a5fc)',
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
-    thumbLabel: 'Application',
     href: '/projects/palihog-app',
     logoSize: 'w-24 h-24',
   },
@@ -22,7 +21,6 @@ const projects = [
     thumbnailImage: '/images/projects/diosys/diosys-icon.png',
     gradient: 'linear-gradient(135deg, #eff7c8, #dbf760)',
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
-    thumbLabel: 'Website',
     href: '#',
     logoSize: 'w-26 h-26',
   },
@@ -33,7 +31,6 @@ const projects = [
     thumbnailImage: '/images/projects/furever-home/furever-home-icon.png',
     gradient: 'linear-gradient(135deg, #fce6e9, #ff4060)',
     gradientDark: 'linear-gradient(135deg, #3d1030, #6b1e52)',
-    thumbLabel: 'Branding',
     href: '#',
     logoSize: 'w-24 h-24',
   },
@@ -119,14 +116,6 @@ export default function Projects() {
               ) : (
                 <div className="w-12 h-12 bg-gray-300 rounded-full" />
               )}
-              
-              {/* Thumbnail Label */}
-              <span
-                className="absolute bottom-3 right-4 font-display text-sm italic opacity-40"
-                style={{ color: 'var(--text-primary)' }}
-              >
-                {project.thumbLabel}
-              </span>
             </div>
 
             {/* Body */}
