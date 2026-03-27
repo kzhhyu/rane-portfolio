@@ -169,7 +169,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll hint */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      {/* <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
         <div
           className="scroll-pulse w-px h-10"
           style={{ background: 'linear-gradient(to bottom, var(--text-accent), transparent)' }}
@@ -177,7 +177,7 @@ export default function Hero() {
         <span className="text-xs tracking-widest uppercase" style={{ color: 'var(--text-muted)' }}>
           scroll
         </span>
-      </div>
+      </div>*/}
     </section>
   )
 }
