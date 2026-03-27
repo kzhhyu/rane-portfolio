@@ -154,7 +154,7 @@ export default function PalihogApp() {
             ))}
           </div>
 
-          {/* Gallery Grid - 3 columns on desktop, 2 on tablet, 1 on mobile */}
+          {/* Gallery Grid - 3 columns on desktop, 2 on tablet, 1 on mobile with square containers */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filteredDesigns.map((design) => (
               <div
@@ -166,8 +166,8 @@ export default function PalihogApp() {
                 }}
                 onClick={() => setSelectedImage(design.id)}
               >
-                {/* Image Container */}
-                <div className="relative aspect-[9/16] sm:aspect-[3/4] lg:aspect-[9/16] overflow-hidden bg-gray-100">
+                {/* Square Image Container (1:1 aspect ratio) */}
+                <div className="relative aspect-square overflow-hidden bg-gray-100">
                   <div className="relative w-full h-full">
                     <Image
                       src={design.image}
