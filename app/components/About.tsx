@@ -91,18 +91,19 @@ export default function About() {
               and design systems that scale across products.
             </p>
             <p>
-              Additionally, I design not just web and mobile platforms, but as well as other graphic designs like
-              <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>logos, posters, and branding materials</strong>. I have a passion for crafting visual identities that resonate
-              and communicate effectively.
+              Additionally, I design not just web and mobile platforms, but as well as other graphic designs like{' '}
+              <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
+                logos, posters, and branding materials</strong>.{' '}
+                I have a passion for crafting visual identities that resonate and communicate effectively.
             </p>
           </div>
 
           {/* Stats */}
-          {/*<div
+          <div
             className="flex gap-10 mt-8 pt-8 border-t"
             style={{ borderColor: 'var(--border)' }}
           >
-            {stats.map(stat => (
+            {/*{stats.map(stat => (
               <div key={stat.label}>
                 <div className="font-display text-4xl leading-none mb-1" style={{ color: 'var(--text-accent)' }}>
                   {stat.num}
@@ -111,8 +112,8 @@ export default function About() {
                   {stat.label}
                 </div>
               </div>
-            ))}
-          </div>*/}
+            ))}*/}
+          </div>
         </div>
 
       </div>
