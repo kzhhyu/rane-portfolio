@@ -13,7 +13,7 @@ const projects = [
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
     thumbLabel: 'Application',
     href: '/projects/palihog-app',
-    logoSize: 'w-24 h-24', // Default size for PALIHOG
+    logoSize: 'w-24 h-24',
   },
   {
     name: 'DIOSys',
@@ -24,7 +24,7 @@ const projects = [
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
     thumbLabel: 'Website',
     href: '#',
-    logoSize: 'w-46 h-36',
+    logoSize: 'w-36 h-36',
   },
   {
     name: 'Furever Home',
