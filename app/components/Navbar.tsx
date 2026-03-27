@@ -18,9 +18,19 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
       }}
     >
       {/* Logo */}
-      <span className="font-display text-2xl" style={{ color: 'var(--text-primary)' }}>
-        rane<span style={{ color: 'var(--text-accent)' }}>.</span>
-      </span>
+      <a
+        href="#"
+        onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        }}
+        className="no-underline"
+      >
+        <span className="font-display text-2xl" style={{ color: 'var(--text-primary)' }}>
+          rane<span style={{ color: 'var(--text-accent)' }}></span>
+        </span>
+      </a>
 
       {/* Links */}
       <ul className="hidden md:flex items-center gap-8 list-none">
