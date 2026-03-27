@@ -11,7 +11,7 @@ const projects = [
     gradient: 'linear-gradient(135deg, #ede9fe, #c4b5fd)',
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
     thumbLabel: 'App design',
-    href: '#',
+    href: '/projects/palihog-app',
   },
   {
     name: 'Vault — Finance Dashboard',
