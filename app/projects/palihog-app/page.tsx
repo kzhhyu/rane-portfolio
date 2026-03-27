@@ -61,7 +61,7 @@ export default function PalihogApp() {
     : uiDesigns.filter(design => design.category === activeCategory)
 
   return (
-    <main className="min-h-screen pt-32 pb-20 max-w-4xl mx-auto px-10">
+    <main className="min-h-screen pt-32 pb-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
       {/* Back button */}
       <Link
         href="/#projects"
@@ -75,7 +75,7 @@ export default function PalihogApp() {
       <div ref={contentRef} className="reveal">
         {/* Title */}
         <h1
-          className="font-display text-5xl lg:text-6xl leading-tight tracking-tight mb-4"
+          className="font-display text-4xl sm:text-5xl lg:text-6xl leading-tight tracking-tight mb-4"
           style={{ color: 'var(--text-primary)' }}
         >
           PALIHOG App
@@ -99,12 +99,12 @@ export default function PalihogApp() {
 
         {/* Hero Image Placeholder */}
         <div
-          className="w-full h-96 rounded-2xl mb-12 flex items-center justify-center overflow-hidden"
+          className="w-full h-64 sm:h-80 lg:h-96 rounded-2xl mb-12 flex items-center justify-center overflow-hidden"
           style={{
             background: 'linear-gradient(135deg, #ede9fe, #c4b5fd)',
           }}
         >
-          <span className="text-6xl">📱</span>
+          <span className="text-4xl sm:text-5xl lg:text-6xl">📱</span>
         </div>
 
         {/* Overview */}
@@ -133,12 +133,12 @@ export default function PalihogApp() {
           </p>
 
           {/* Category Filters */}
-          <div className="flex flex-wrap gap-2 mb-8">
+          <div className="flex flex-wrap gap-2 mb-8 overflow-x-auto pb-2">
             {categories.map(category => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                   activeCategory === category
                     ? 'text-white'
                     : 'border'
@@ -154,8 +154,8 @@ export default function PalihogApp() {
             ))}
           </div>
 
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Gallery Grid - 3 columns on desktop, 2 on tablet, 1 on mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {filteredDesigns.map((design) => (
               <div
                 key={design.id}
@@ -167,32 +167,32 @@ export default function PalihogApp() {
                 onClick={() => setSelectedImage(design.id)}
               >
                 {/* Image Container */}
-                <div className="relative h-80 overflow-hidden bg-gray-100">
+                <div className="relative aspect-[9/16] sm:aspect-[3/4] lg:aspect-[9/16] overflow-hidden bg-gray-100">
                   <div className="relative w-full h-full">
                     <Image
                       src={design.image}
                       alt={design.title}
                       fill
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-contain transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <span className="text-white text-sm font-medium px-4 py-2 rounded-full bg-black/50 backdrop-blur-sm">
+                    <span className="text-white text-xs sm:text-sm font-medium px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-black/50 backdrop-blur-sm">
                       Click to enlarge
                     </span>
                   </div>
                 </div>
                 
                 {/* Image Info */}
-                <div className="p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <h3 className="font-display text-lg" style={{ color: 'var(--text-primary)' }}>
+                <div className="p-3 sm:p-4">
+                  <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
+                    <h3 className="font-display text-base sm:text-lg" style={{ color: 'var(--text-primary)' }}>
                       {design.title}
                     </h3>
                     <span
-                      className="text-xs px-2 py-1 rounded-full"
+                      className="text-xs px-2 py-1 rounded-full whitespace-nowrap"
                       style={{
                         background: 'var(--lavender-50, #f5f3ff)',
                         color: 'var(--text-accent)',
@@ -201,7 +201,7 @@ export default function PalihogApp() {
                       {design.category}
                     </span>
                   </div>
-                  <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
+                  <p className="text-xs sm:text-sm" style={{ color: 'var(--text-muted)' }}>
                     {design.description}
                   </p>
                 </div>
@@ -234,7 +234,7 @@ export default function PalihogApp() {
             Key Features
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             {[
               { title: 'User Profiles', desc: 'Verified student profiles with ratings and reviews to build trust' },
               { title: 'Real-time Chat', desc: 'In-app messaging for seamless coordination' },
@@ -267,29 +267,30 @@ export default function PalihogApp() {
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
           onClick={() => setSelectedImage(null)}
         >
-          <div className="relative max-w-5xl max-h-[90vh] w-full h-full">
+          <div className="relative w-full max-w-5xl max-h-[90vh]">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors z-10"
+              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors z-10"
             >
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-[70vh] sm:h-[80vh]">
               <Image
                 src={uiDesigns.find(d => d.id === selectedImage)?.image || ''}
                 alt={uiDesigns.find(d => d.id === selectedImage)?.title || ''}
                 fill
                 className="object-contain"
                 sizes="100vw"
+                priority
               />
             </div>
-            <div className="absolute bottom-4 left-0 right-0 text-center text-white">
-              <p className="text-lg font-medium">
+            <div className="absolute bottom-0 left-0 right-0 text-center text-white bg-gradient-to-t from-black/50 to-transparent pt-8 pb-4">
+              <p className="text-base sm:text-lg font-medium">
                 {uiDesigns.find(d => d.id === selectedImage)?.title}
               </p>
-              <p className="text-sm opacity-75">
+              <p className="text-xs sm:text-sm opacity-75">
                 {uiDesigns.find(d => d.id === selectedImage)?.description}
               </p>
             </div>
