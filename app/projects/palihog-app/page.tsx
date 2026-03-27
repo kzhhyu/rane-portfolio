@@ -41,7 +41,7 @@ export default function PalihogApp() {
       id: 4,
       title: 'Chat Interface',
       description: 'In-app chat for coordinating service requests',
-      image: '/images/projects/palihog-app/messaging.png',
+      image: '/images/projects/palihog-app/messages.png',
       category: 'Communication',
     },
     {
