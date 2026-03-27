@@ -49,27 +49,6 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
         ))}
       </ul>
 
-      {/* Theme toggle */}
-      <button
-        onClick={toggleTheme}
-        aria-label="Toggle theme"
-        className="w-10 h-10 rounded-full flex items-center justify-center text-base border transition-all duration-300 hover:scale-110"
-        style={{
-          background: 'var(--bg-card)',
-          borderColor: 'var(--border)',
-          color: 'var(--text-muted)',
-        }}
-        onMouseEnter={e => {
-          e.currentTarget.style.color = 'var(--text-accent)'
-          e.currentTarget.style.background = 'var(--surface)'
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.color = 'var(--text-muted)'
-          e.currentTarget.style.background = 'var(--bg-card)'
-        }}
-      >
-        {theme === 'dark' ? '☀' : '☽'}
-      </button>
     </nav>
   )
 }
