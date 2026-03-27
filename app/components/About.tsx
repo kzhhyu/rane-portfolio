@@ -7,11 +7,11 @@ const skills = [
   'Design Systems', 'Interaction Design', 'Figma / Framer', 'User Testing',
 ]
 
-const stats = [
+{/*const stats = [
   { num: '3+', label: 'Years experience' },
   { num: '20+', label: 'Projects shipped' },
   { num: '∞', label: 'Iterations made' },
-]
+]*/}
 
 export default function About() {
   const leftRef  = useRef<HTMLDivElement>(null)
@@ -92,13 +92,13 @@ export default function About() {
             </p>
             <p>
               Additionally, I design not just web and mobile platforms, but as well as other graphic designs like
-              logos, posters, and branding materials. I have a passion for crafting visual identities that resonate
+              <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>logos, posters, and branding materials</strong>. I have a passion for crafting visual identities that resonate
               and communicate effectively.
             </p>
           </div>
 
           {/* Stats */}
-          <div
+          {/*<div
             className="flex gap-10 mt-8 pt-8 border-t"
             style={{ borderColor: 'var(--border)' }}
           >
@@ -112,7 +112,7 @@ export default function About() {
                 </div>
               </div>
             ))}
-          </div>
+          </div>*/}
         </div>
 
       </div>
