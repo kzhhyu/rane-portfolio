@@ -1,10 +1,12 @@
 'use client'
 
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
+import { useEffect } from 'react'
 
 export default function Navbar() {
   const pathname = usePathname()
+  const router = useRouter()
   const isHomePage = pathname === '/'
 
   const scrollToSection = (sectionId: string) => {
@@ -28,8 +30,8 @@ export default function Navbar() {
       // If on home page, just scroll to the section
       scrollToSection(sectionId)
     } else {
-      // If on another page, navigate to home page first, then scroll
-      window.location.href = `/#${sectionId}`
+      // If on another page, navigate to home page with hash
+      router.push(`/#${sectionId}`)
     }
   }
 
@@ -44,6 +46,16 @@ export default function Navbar() {
     }
     // If not on home page, let Link handle navigation
   }
+
+  // Handle hash navigation when page loads
+  useEffect(() => {
+    if (window.location.hash) {
+      const sectionId = window.location.hash.slice(1)
+      setTimeout(() => {
+        scrollToSection(sectionId)
+      }, 100)
+    }
+  }, [pathname])
 
   return (
     <nav
