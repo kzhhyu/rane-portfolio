@@ -97,16 +97,6 @@ export default function PalihogApp() {
           ))}
         </div>
 
-        {/* Hero Image Placeholder */}
-        <div
-          className="w-full h-64 sm:h-80 lg:h-96 rounded-2xl mb-12 flex items-center justify-center overflow-hidden"
-          style={{
-            background: 'linear-gradient(135deg, #ede9fe, #c4b5fd)',
-          }}
-        >
-          <span className="text-4xl sm:text-5xl lg:text-6xl">📱</span>
-        </div>
-
         {/* Overview */}
         <section className="mb-12">
           <h2
