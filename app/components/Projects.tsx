@@ -8,12 +8,11 @@ const projects = [
     name: 'PALIHOG App',
     desc: 'A student-centered service and marketplace app that allows users to request or offer help through features like pabili, patulong, padala, and pakuha, promoting convenience, trust, and community within the campus.',
     tags: ['Mobile', 'UI/UX', 'Marketplace'],
-    icon: '/images/projects/palihog-icon/palihog-icon.png',
+    thumbnailImage: '/images/projects/palihog-icon/palihog-icon.png',
     gradient: 'linear-gradient(135deg, #ede9fe, #c4b5fd)',
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
     thumbLabel: 'Application',
     href: '/projects/palihog-app',
-    isImageIcon: true,
   },
   {
     name: 'DIOSys',
@@ -24,7 +23,6 @@ const projects = [
     gradientDark: 'linear-gradient(135deg, #0c2a40, #1a4a6e)',
     thumbLabel: 'Website',
     href: '#',
-    isImageIcon: false,
   },
   {
     name: 'Furever Home',
@@ -35,7 +33,6 @@ const projects = [
     gradientDark: 'linear-gradient(135deg, #3d1030, #6b1e52)',
     thumbLabel: 'Branding',
     href: '#',
-    isImageIcon: false,
   },
 ]
 
@@ -99,23 +96,23 @@ export default function Projects() {
           >
             {/* Thumbnail */}
             <div
-              className="h-44 flex items-center justify-center text-4xl relative overflow-hidden"
+              className="h-44 flex items-center justify-center relative overflow-hidden"
               style={{ background: project.gradient }}
             >
-              {project.isImageIcon ? (
-                // Render image icon
-                <div className="relative w-16 h-16">
+              {project.thumbnailImage ? (
+                // Render image as thumbnail
+                <div className="relative w-20 h-20">
                   <Image
-                    src={project.icon}
+                    src={project.thumbnailImage}
                     alt={project.name}
                     fill
                     className="object-contain"
-                    sizes="64px"
+                    sizes="80px"
                   />
                 </div>
               ) : (
-                // Render text icon
-                <span>{project.icon}</span>
+                // Render text icon if no image
+                <span className="text-4xl">{project.icon}</span>
               )}
               <span
                 className="absolute bottom-3 right-4 font-display text-sm italic opacity-40"
