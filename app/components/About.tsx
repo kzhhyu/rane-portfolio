@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 
 const skills = [
-  'UI Design', 'UX Research', 'Prototyping', 'Wireframing',
+  'UI Design', 'Graphics Design', 'Prototyping', 'Wireframing',
   'Design Systems', 'Interaction Design', 'Figma / Framer', 'User Testing',
 ]
 
@@ -91,8 +91,9 @@ export default function About() {
               and design systems that scale across products.
             </p>
             <p>
-              When I&apos;m not designing, I&apos;m studying human behaviour, exploring type, or sketching
-              ideas that might someday become something real.
+              Additionally, I design not just web and mobile platforms, but as well as other graphic designs like
+              logos, posters, and branding materials. I have a passion for crafting visual identities that resonate
+              and communicate effectively.
             </p>
           </div>
 
