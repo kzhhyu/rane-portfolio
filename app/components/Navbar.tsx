@@ -28,7 +28,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
         className="no-underline"
       >
         <span className="font-display text-2xl" style={{ color: 'var(--text-primary)' }}>
-          rane<span style={{ color: 'var(--text-accent)' }}></span>
+          KL<span style={{ color: 'var(--text-accent)' }}></span>
         </span>
       </a>
 
