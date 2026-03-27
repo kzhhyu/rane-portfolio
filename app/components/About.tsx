@@ -73,7 +73,7 @@ export default function About() {
 
         {/* Right — bio + stats */}
         <div ref={rightRef} className="reveal" style={{ transitionDelay: '0.15s' }}>
-          <div className="space-y-5 text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
+          <div className="space-y-5 text-base font-light leading-loose" style={{ color: 'var(--text-primary)' }}>
             <p>
               I am an undergraduate{' '}
               <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
