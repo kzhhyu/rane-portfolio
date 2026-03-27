@@ -1,11 +1,12 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function PalihogApp() {
   const contentRef = useRef<HTMLDivElement>(null)
+  const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -13,6 +14,51 @@ export default function PalihogApp() {
     }, 100)
     return () => clearTimeout(timer)
   }, [])
+
+  const uiDesigns = [
+    {
+        id: 1,
+        title: 'Onboarding Screen',
+        description: 'Loading screen when opening the app',
+        image: '/images/projects/palihog-app/onboarding.png',
+        category: 'Onboarding',
+      },
+    {
+        id: 2,
+        title: 'Home Screen',
+        description: 'Main dashboard showing available services and user activity',
+        image: '/images/projects/palihog-app/home.png',
+        category: 'Dashboard',
+      },
+    {
+        id: 3,
+        title: 'Request Screen',
+        description: 'Interface for users to request services from other students',
+        image: '/images/projects/palihog-app/request.png',
+        category: 'Services',
+      },
+    {
+        id: 4,
+        title: 'Chat Interface',
+        description: 'In-app chat for coordinating service requests',
+        image: '/images/projects/palihog-app/messaging.png',
+        category: 'Communication',
+      },
+    {
+        id: 5,
+        title: 'User Profile',
+        description: 'Verified student profiles',
+        image: '/images/projects/palihog-app/profile.png',
+        category: 'Profile',
+      },
+    ];
+
+    const categories = ['All', 'Onboarding', 'Dashboard', 'Services', 'Communication', 'Profile']
+    const [activeCategory, setActiveCategory] = useState('All')
+
+    const filteredDesigns = activeCategory === 'All' 
+        ? uiDesigns 
+        : uiDesigns.filter(design => design.category === activeCategory)
 
   return (
     <main className="min-h-screen pt-32 pb-20 max-w-4xl mx-auto px-10">
