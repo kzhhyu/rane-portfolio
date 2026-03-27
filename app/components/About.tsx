@@ -75,12 +75,6 @@ export default function About() {
         <div ref={rightRef} className="reveal" style={{ transitionDelay: '0.15s' }}>
           <div className="space-y-5 text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
             <p>
-              I&apos;m a UI/UX designer driven by curiosity and a deep respect for the{' '}
-              <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
-                people who use what I create
-              </strong>
-            </p>
-            <p>
               I am an undergraduate{' '}
               <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
                 Bachelor of Science in Information Technology
