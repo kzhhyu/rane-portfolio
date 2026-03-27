@@ -74,7 +74,7 @@ export default function PalihogApp() {
           </p>
         </section>
 
-        {/* Problem Statement */}
+        {/* Problem Statement 
         <section className="mb-12">
           <h2
             className="font-display text-2xl lg:text-3xl mb-4"
@@ -85,9 +85,9 @@ export default function PalihogApp() {
           <p className="text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
             Students often face challenges when needing quick assistance on campus—whether it's buying items, getting help with tasks, sending packages, or requesting pickups. Existing solutions are fragmented and don't provide a trusted, unified platform for student-to-student services.
           </p>
-        </section>
+        </section> */}
 
-        {/* Solution */}
+        {/* Solution
         <section className="mb-12">
           <h2
             className="font-display text-2xl lg:text-3xl mb-4"
@@ -104,9 +104,9 @@ export default function PalihogApp() {
             <li><strong className="font-medium" style={{ color: 'var(--text-accent)' }}>Padala:</strong> Send packages within the campus</li>
             <li><strong className="font-medium" style={{ color: 'var(--text-accent)' }}>Pakuha:</strong> Request pickups from specific locations</li>
           </ul>
-        </section>
+        </section> */}
 
-        {/* Design Process */}
+        {/* Design Process
         <section className="mb-12">
           <h2
             className="font-display text-2xl lg:text-3xl mb-4"
@@ -152,7 +152,7 @@ export default function PalihogApp() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Key Features */}
         <section className="mb-12">
@@ -189,7 +189,7 @@ export default function PalihogApp() {
           </div>
         </section>
 
-        {/* Results */}
+        {/* Results 
         <section className="mb-12">
           <h2
             className="font-display text-2xl lg:text-3xl mb-4"
@@ -223,9 +223,9 @@ export default function PalihogApp() {
           <p className="text-base font-light leading-loose" style={{ color: 'var(--text-muted)' }}>
             The app successfully launched with positive feedback from the student community, with users reporting increased convenience and stronger campus connections.
           </p>
-        </section>
+        </section>*/}
 
-        {/* Next Steps */}
+        {/* Next Steps
         <section className="mb-12">
           <h2
             className="font-display text-2xl lg:text-3xl mb-4"
@@ -239,7 +239,7 @@ export default function PalihogApp() {
             <li>Expanded payment options and escrow system</li>
             <li>Integration with campus events and announcements</li>
           </ul>
-        </section>
+        </section> */}
       </div>
     </main>
   )
