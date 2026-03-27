@@ -8,7 +8,7 @@ const projects = [
     name: 'PALIHOG App',
     desc: 'A student-centered service and marketplace app that allows users to request or offer help through features like pabili, patulong, padala, and pakuha, promoting convenience, trust, and community within the campus.',
     tags: ['Mobile', 'UI/UX', 'Marketplace'],
-    thumbnailImage: '/public/images/projects/palihog-icon/palihog-icon.png',
+    thumbnailImage: '/images/projects/palihog-icon/palihog-icon.png', // Removed /public
     gradient: 'linear-gradient(135deg, #ede9fe, #c4b5fd)',
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
     thumbLabel: 'Application',
@@ -94,26 +94,37 @@ export default function Projects() {
               e.currentTarget.style.boxShadow = 'none'
             }}
           >
-            {/* Thumbnail */}
+            {/* Thumbnail Container */}
             <div
               className="h-44 flex items-center justify-center relative overflow-hidden"
               style={{ background: project.gradient }}
             >
+              {/* Improved Image Handling */}
               {project.thumbnailImage ? (
-                // Render image as thumbnail
-                <div className="relative w-20 h-20">
+                <div className="relative w-24 h-24 flex items-center justify-center">
                   <Image
                     src={project.thumbnailImage}
                     alt={project.name}
-                    fill
-                    className="object-contain"
-                    sizes="80px"
+                    width={96}
+                    height={96}
+                    className="object-contain w-auto h-auto max-w-full max-h-full"
+                    priority={i === 0} // Prioritize first image
+                    onError={(e) => {
+                      // Fallback if image fails to load
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      // You could also show a fallback icon here
+                    }}
                   />
                 </div>
               ) : (
-                // Render text icon if no image
-                <span className="text-4xl">{project.icon}</span>
+                // Fallback icon when no image is provided
+                <span className="text-5xl font-bold opacity-80" style={{ color: 'var(--text-primary)' }}>
+                  {project.icon}
+                </span>
               )}
+              
+              {/* Thumbnail Label */}
               <span
                 className="absolute bottom-3 right-4 font-display text-sm italic opacity-40"
                 style={{ color: 'var(--text-primary)' }}
