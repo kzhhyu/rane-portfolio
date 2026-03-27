@@ -65,7 +65,7 @@ export default function Projects() {
           className="font-display text-4xl lg:text-5xl leading-tight tracking-tight mb-4"
           style={{ color: 'var(--text-primary)' }}
         >
-          Projects  I have worked on.
+          Projects I have worked on.
         </h2>
         <p className="text-base font-light leading-loose max-w-lg" style={{ color: 'var(--text-muted)' }}>
           A selection of projects that reflect how I think, what I care about, and the problems I love solving.
@@ -102,7 +102,21 @@ export default function Projects() {
               className="h-44 flex items-center justify-center text-4xl relative overflow-hidden"
               style={{ background: project.gradient }}
             >
-              {project.icon}
+              {project.isImageIcon ? (
+                // Render image icon
+                <div className="relative w-16 h-16">
+                  <Image
+                    src={project.icon}
+                    alt={project.name}
+                    fill
+                    className="object-contain"
+                    sizes="64px"
+                  />
+                </div>
+              ) : (
+                // Render text icon
+                <span>{project.icon}</span>
+              )}
               <span
                 className="absolute bottom-3 right-4 font-display text-sm italic opacity-40"
                 style={{ color: 'var(--text-primary)' }}
