@@ -1,36 +1,36 @@
 'use client'
 
-interface NavbarProps {
-  theme: 'light' | 'dark'
-  toggleTheme: () => void
-}
+import Link from 'next/link'
 
-export default function Navbar({ theme, toggleTheme }: NavbarProps) {
+export default function Navbar() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-5 backdrop-blur-md border-b"
       style={{
-        background: theme === 'dark'
-          ? 'rgba(16, 14, 26, 0.8)'
-          : 'rgba(250, 249, 253, 0.8)',
+        background: 'rgba(250, 249, 253, 0.8)',
         borderColor: 'var(--border)',
         transition: 'background 0.3s ease, border-color 0.3s ease',
       }}
     >
       {/* Logo */}
-      <a
-        href="#"
+      <Link
+        href="/"
         onClick={(e) => {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-
+          if (window.location.pathname === '/') {
+            e.preventDefault();
+            scrollToTop();
+          }
         }}
         className="no-underline"
       >
         <span className="font-display text-2xl" style={{ color: 'var(--text-primary)' }}>
           KL<span style={{ color: 'var(--text-accent)' }}></span>
         </span>
-      </a>
+      </Link>
 
       {/* Links */}
       <ul className="hidden md:flex items-center gap-8 list-none">
@@ -48,7 +48,6 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           </li>
         ))}
       </ul>
-
     </nav>
   )
 }
