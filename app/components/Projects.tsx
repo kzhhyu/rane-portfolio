@@ -31,7 +31,7 @@ const projects = [
     desc: 'An adoption website for a local animal shelter that connects potential pet adopters with their perfect furry companions, providing detailed profiles, adoption resources, and a seamless application process to help more animals find loving homes.',
     tags: ['Web', 'Branding', 'Design System'],
     thumbnailImage: '/images/projects/furever-home/furever-home-icon.png',
-    gradient: 'linear-gradient(135deg, #fce6e9, #fce6e9)',
+    gradient: 'linear-gradient(135deg, #fce6e9, #e02645)',
     gradientDark: 'linear-gradient(135deg, #3d1030, #6b1e52)',
     thumbLabel: 'Branding',
     href: '#',
