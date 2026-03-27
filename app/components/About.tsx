@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react'
 
 const skills = [
-  'UI Design', 'Graphics Design', 'Prototyping', 'Wireframing',
+  'UI Design', 'Graphic Design', 'Prototyping', 'Wireframing',
   'Design Systems', 'Interaction Design', 'Figma / Framer', 'User Testing',
 ]
 
@@ -79,8 +79,14 @@ export default function About() {
               <strong className="font-medium" style={{ color: 'var(--text-primary)' }}>
                 people who use what I create
               </strong>
-              . Every pixel I push has a reason. Every interaction I design starts with a question:{' '}
-              <em>does this serve the user?</em>
+            </p>
+            <p>
+              I am an undergraduate Bachelor of Science in Information Technology student at 
+              Father Saturnino Urios University with a passion for UI/UX design.
+              I have a strong desire to create intuitive and visually appealing digital experiences
+              that enhance user satisfaction. With a solid foundation in design principles and a keen
+              eye for detail, I am dedicated to crafting user-centered designs that effectively communicate
+              ideas and solve problems.
             </p>
             <p>
               I believe good design is quiet — it guides without shouting, delights without demanding attention.
