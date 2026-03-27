@@ -2,7 +2,12 @@
 
 import Link from 'next/link'
 
-export default function Navbar() {
+interface NavbarProps {
+  theme: 'light' | 'dark'
+  toggleTheme: () => void
+}
+
+export default function Navbar({ theme, toggleTheme }: NavbarProps) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -11,7 +16,9 @@ export default function Navbar() {
     <nav
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-5 backdrop-blur-md border-b"
       style={{
-        background: 'rgba(250, 249, 253, 0.8)',
+        background: theme === 'dark'
+          ? 'rgba(16, 14, 26, 0.8)'
+          : 'rgba(250, 249, 253, 0.8)',
         borderColor: 'var(--border)',
         transition: 'background 0.3s ease, border-color 0.3s ease',
       }}
