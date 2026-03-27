@@ -24,7 +24,7 @@ const projects = [
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
     thumbLabel: 'Website',
     href: '#',
-    logoSize: 'w-32 h-32', // Bigger size for DIOSys
+    logoSize: 'w-46 h-36',
   },
   {
     name: 'Furever Home',
