@@ -20,22 +20,22 @@ const projects = [
     desc: 'A data management system for the Diocese of Butuan that streamlines operations, enhances communication, and provides a centralized platform for managing parish information, events, and resources.',
     tags: ['Web', 'Design System'],
     thumbnailImage: '/images/projects/diosys/diosys-icon.png',
-    gradient: 'linear-gradient(135deg, #ede9fe, #c4b5fd)',
+    gradient: 'linear-gradient(135deg, #edfca9, #B8D53D)',
     gradientDark: 'linear-gradient(135deg, #2e1a5e, #4c2889)',
     thumbLabel: 'Website',
     href: '#',
-    logoSize: 'w-36 h-36',
+    logoSize: 'w-24 h-24',
   },
   {
     name: 'Furever Home',
     desc: 'An adoption website for a local animal shelter that connects potential pet adopters with their perfect furry companions, providing detailed profiles, adoption resources, and a seamless application process to help more animals find loving homes.',
     tags: ['Web', 'Branding', 'Design System'],
-    icon: '◉',
+    thumbnailImage: '/images/projects/furever-home/furever-home-icon.png',
     gradient: 'linear-gradient(135deg, #fce7f3, #fbcfe8)',
     gradientDark: 'linear-gradient(135deg, #3d1030, #6b1e52)',
     thumbLabel: 'Branding',
     href: '#',
-    logoSize: 'w-24 h-24', // Default size for Furever Home
+    logoSize: 'w-24 h-24',
   },
 ]
 
@@ -108,8 +108,6 @@ export default function Projects() {
                   <Image
                     src={project.thumbnailImage}
                     alt={project.name}
-                    width={project.name === 'DIOSys' ? 128 : 96} // 128px for DIOSys, 96px for others
-                    height={project.name === 'DIOSys' ? 128 : 96}
                     className="object-contain w-auto h-auto max-w-full max-h-full"
                     priority={i === 0}
                     onError={(e) => {
@@ -119,9 +117,7 @@ export default function Projects() {
                   />
                 </div>
               ) : (
-                <span className="text-5xl font-bold opacity-80" style={{ color: 'var(--text-primary)' }}>
-                  {project.icon}
-                </span>
+                <div className="w-12 h-12 bg-gray-300 rounded-full" />
               )}
               
               {/* Thumbnail Label */}
