@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -23,6 +24,7 @@ const projects = [
     gradientDark: 'linear-gradient(135deg, #0c2a40, #1a4a6e)',
     thumbLabel: 'Website',
     href: '#',
+    isImageIcon: false,
   },
   {
     name: 'Furever Home',
@@ -33,6 +35,7 @@ const projects = [
     gradientDark: 'linear-gradient(135deg, #3d1030, #6b1e52)',
     thumbLabel: 'Branding',
     href: '#',
+    isImageIcon: false,
   },
 ]
 
